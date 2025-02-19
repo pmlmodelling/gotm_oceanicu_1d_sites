@@ -10,7 +10,7 @@ The FABM yaml files for the individual bio-geochemical models are obtained from 
 
 In order to create a working setup two different methods are supported:
 
-   1. manually edit the_gotm.yaml_and substitute the _fabm:_ section with the content of the relevant file in the gotm-snippets folder
+   1. manually edit the _gotm.yaml_ and substitute the _fabm:_ section with the content of the relevant file in the gotm-snippets folder
    2. ~use the provided Python to perform the task automatically~ (NOT READY YET)
 
 To do method 1 do the following steps.
@@ -18,12 +18,21 @@ To do method 1 do the following steps.
 #### Edit _gotm.yaml_
 
    1. Enter the folder of a site
-   2. Open the _gotm.yaml_ file in an repositories
-   3: Search and replace the _fabm: section_
-       4. Delete down to the _eq_state:_ section.
-       5. Insert the content of the relevant file from the gotm_snippets folder
+   2. Open the _gotm.yaml_ file
+   3. Search and replace the _fabm: section_
+       1. Search for _fabm:_
+       1. Delete down to the _eq_state:_ section
+       3. Insert the content of the relevant file from the _gotm_snippets_ folder
    5. Save the file and exit
 
 #### Copy _fabm.yaml_
 
    1. Copy the relevant FABM yaml file to the <site_dir>/fabm.yaml
+
+## Executing GOTM
+
+The format of the GOTM and FABM yaml files corresponds to GOTM version 6 which must be compiled and in the PATH.
+To run a configured setup simply do:
+
+```
+gotm
