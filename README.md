@@ -13,13 +13,15 @@ In order to create a working setup two different methods are supported:
    1. manually edit the _gotm.yaml_ and substitute the _fabm:_ section with the content of the relevant file in the gotm-snippets folder and copy the relevant FABM yaml file to the setup folder.
    2. use the provided Python to perform the task automatically
 
-To use the manual method - do the following steps.
+#### Manual method
 
-#### Edit _gotm.yaml_
+Do the following steps
+
+###### Edit _gotm.yaml_
 
    1. Enter the folder of a site
-      2. Create a copy of gotm.yaml:
-       ```copy gotm.yaml gotm.yaml.org```
+   2. Create a copy of gotm.yaml:
+       `copy gotm.yaml gotm.yaml.org`
    2. Open the _gotm.yaml_ file in an editor
    3. Search and replace the _fabm: section_
        1. Search for _fabm:_
@@ -27,11 +29,13 @@ To use the manual method - do the following steps.
        3. Insert the content of the relevant file from the _gotm_snippets_ folder
    5. Save the file and exit
 
-#### Copy _fabm.yaml_
+###### Copy _fabm.yaml_
 
    1. Copy the relevant FABM yaml file to the <site_dir>/fabm.yaml
 
-To use the automatic method - execute the following command with appropriate arguments
+#### Script method
+
+Execute the following command with appropriate arguments
 
 ```
 python config_set.py BATS ergom 
@@ -44,5 +48,4 @@ To run a configured setup simply do in the setup folder:
 
 ```
 gotm
-
 ```
