@@ -1,0 +1,94 @@
+# ESTOC
+estoc:
+  "name": "ESTOC"
+  "lat": 29.04
+  "lon": -15.5
+  "depth": 3633.5
+  "url": "https://dods.ndbc.noaa.gov/oceansites/"
+
+# BATS
+bats:
+  "name": "BATS"
+  "lat": 31.66
+  "lon": -64.16
+  "depth": 4565.6
+  "url": "https://bats.bios.asu.edu/"
+
+# DYFAMED
+dyfamed:
+  "name": "DYFAMED"
+  "lat": 43.42
+  "lon": 7.87
+  "depth": 2344.9
+  "url": "http://dyfbase.obs-vlfr.fr/"
+
+# PAP
+pap:
+  "name": "PAP"
+  "lat": 48.83
+  "lon": -16.5
+  "depth": 4856.4
+  "url": "https://projects.noc.ac.uk/pap/outputs"
+
+# HOT
+hot:
+  "name": "HOT"
+  "lat": 22.75
+  "lon": -158.0
+  "depth": 4744.7
+  "url": "https://hahana.soest.hawaii.edu/hot/"
+
+# K2
+k2:
+  "name": "K2"
+  "lat": 47.0
+  "lon": 160.0
+  "depth": 5184.5
+  "url": "https://www.jamstec.go.jp/k2s1/en/publications.html"
+
+# S1
+s1:
+  "name": "S1"
+  "lat": 30.0
+  "lon": 145.0
+  "depth": 5962.8
+  "url": "https://www.jamstec.go.jp/k2s1/en/publications.html"
+
+# NMDC
+nmdc:
+  "name": "NMDC"
+  "lat": 66.0
+  "lon": 2.0
+  "depth": 2023.5
+  "url": "NORCE, University of Bergen"
+
+# SOTS
+sots:
+  "name": "SOTS"
+  "lat": -47.0
+  "lon": 147.0
+  "depth": 1567.2
+  "url": "https://imos.org.au/facility/deep-water-moorings/southern-ocean-time-series-observatory"
+
+# L4
+l4:
+  "name": "L4"
+  "lat": 50.25
+  "lon": -4.148
+  "depth": 50.5
+  "url": "https://www.westernchannelobservatory.org.uk/index.php"
+
+# Candyfloss
+candyfloss:
+  "name": "CandyFloss"
+  "lat": 49.4
+  "lon": -8.6
+  "depth": 145.7
+  "url": "data.gov.uk"
+
+# OysterGround
+oysterground:
+  "name": "Oysterground"
+  "lat": 54.5
+  "lon": 4.5
+  "depth": 48.0
