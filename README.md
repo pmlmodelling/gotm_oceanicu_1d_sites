@@ -31,7 +31,7 @@ Do the following steps
 
 ###### Copy _fabm.yaml_
 
-   1. Copy the relevant FABM yaml file to the <site_dir>/fabm.yaml
+   1. Copy the relevant FABM yaml file to <site_dir>/fabm.yaml
 
 #### Script method
 
