@@ -1,3 +1,8 @@
+# Notes for ERSEM
+
+ERSEM-setups version of L4 should be used in preference to this set up because temperature and salinity are provided by CTD profiles and are therefore likely to be more realistic.
+
+
 # 1D setups
 
 The repository contains all information to create working configurations for the stations give as folders in the repository. This information contains the environmental forcing like initial conditions for salinity and temperature, time varying surface forcing from ERA5 and a selection of bio-geochemical models to chose from.

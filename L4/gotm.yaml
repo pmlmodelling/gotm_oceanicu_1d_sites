@@ -245,7 +245,7 @@ fabm:                               # Framework for Aquatic Biogeochemical Model
   input:
     absorption_of_silt: # absorption_of_silt
       method: constant # method [constant, file=from file; default=constant]
-      constant_value: 0.05 # value to use throughout the simulation [default=0.0]
+      constant_value: 0.07 # value to use throughout the simulation [default=0.0]
       file: # path to file with series of profiles [default=]
       column: 1 # index of column to read from [default=1]
     mole_fraction_of_carbon_dioxide_in_air: # mole_fraction_of_carbon_dioxide_in_air [1e-6]
