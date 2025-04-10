@@ -153,7 +153,7 @@ turbulence:
     galp: 0.27                      # coefficient for length scale limitation [dimensionless; min=0.0; default=0.27]
     const_num: 5.00000000E-04       # constant eddy diffusivity [m^2/s; min=0.0; default=5.00000000E-04]
     const_nuh: 5.00000000E-04       # constant heat diffusivity [m^2/s; min=0.0; default=5.00000000E-04]
-    k_min: 1.00000000E-06           # minimum turbulent kinetic energy [m^2/s^2; min=0.0; default=1.00000000E-10]
+    k_min: 2.00000000E-05           # minimum turbulent kinetic energy [m^2/s^2; min=0.0; default=1.00000000E-10]
     eps_min: 1.00000000E-12         # minimum dissipation rate [m^2/s^3; min=0.0; default=1.00000000E-12]
     kb_min: 1.00000000E-10          # minimum buoyancy variance [m^2/s^4; min=0.0; default=1.00000000E-10]
     epsb_min: 1.00000000E-14        # minimum buoyancy variance destruction rate [m^2/s^5; min=0.0; default=1.00000000E-14]
@@ -245,7 +245,7 @@ fabm:                               # Framework for Aquatic Biogeochemical Model
   input:
     absorption_of_silt: # absorption_of_silt
       method: constant # method [constant, file=from file; default=constant]
-      constant_value: 0.07 # value to use throughout the simulation [default=0.0]
+      constant_value: 0.005 # value to use throughout the simulation [default=0.0]
       file: # path to file with series of profiles [default=]
       column: 1 # index of column to read from [default=1]
     mole_fraction_of_carbon_dioxide_in_air: # mole_fraction_of_carbon_dioxide_in_air [1e-6]
