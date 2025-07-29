@@ -10,14 +10,14 @@ location:
   depth: 145.7                      # water depth [m; min=0.0; default=100.0]
 time:
   start: 2003-01-01 00:00:00        # start date and time [yyyy-mm-dd HH:MM:SS; default=2017-01-01 00:00:00]
-  stop: 2023-12-31 18:00:00         # stop date and time [yyyy-mm-dd HH:MM:SS; default=2018-01-01 00:00:00]
-  dt: 1800.0                        # time step for integration [s; min=0.0; default=3600.0]
+  stop: 2004-01-31 18:00:00         # stop date and time [yyyy-mm-dd HH:MM:SS; default=2018-01-01 00:00:00]
+  dt: 900.0                        # time step for integration [s; min=0.0; default=3600.0]
 grid:
-  nlev: 104                         # number of layers [min=1; default=100]
-  method: file_sigma                # layer thickness specification [analytical=equal by default with optional zooming, file_sigma=prescribed relative fractions, file_h=prescribed thicknesses; default=analytical]
-  ddu: 1.0                          # surface zooming [dimensionless; min=0.0; default=0.0]
-  ddl: 1.0                          # bottom zooming [dimensionless; min=0.0; default=0.0]
-  file: grid.dat                    # path to file with layer thicknesses [default=]
+   nlev: 100                                         # number of layers [min=1; default=100]
+   method: analytical                                # layer thickness specification [analytical=equal by default with optional zooming, file_sigma=prescribed relative fractions, file_h=prescribed thicknesses; default=analytical]
+   ddu: 2.0                                          # surface zooming [dimensionless; min=0.0; default=0.0]
+   ddl: 1.0                                          # bottom zooming [dimensionless; min=0.0; default=0.0]
+   file:       
 temperature:                        # temperature profile used for initialization and optionally relaxation [Celsius]
   method: file                      # method [off, file=from file, constant, two_layer=two layers with linear gradient in between, buoyancy=from salinity and buoyancy frequency; default=off]
   constant_value: 0.0               # value to use throughout the simulation [Celsius; default=0.0]
@@ -334,3 +334,47 @@ output:
     - source: temp                  # variable name in model
     - source: salt                  # variable name in model
     - source: nuh                   # variable name in model
+  CCS_time_daily_mean_16.06:                         # path of output file, excluding extension
+    use: true                                      # write output to this file [default=true]
+    format: netcdf                                 # format [text, netcdf; default=netcdf]
+    title: GOTM-ERSEM at CCS                        # title [default=GOTM-ERSEM at CCS]
+    time_unit: day                                 # time unit [second, hour, day, month, year, dt=model time step; default=day]
+    time_step: 1                                   # number of time units between output [min=1; default=1]
+    time_start:                                    # start [yyyy-mm-dd HH:MM:SS; default=]
+    time_stop:                                     # stop [yyyy-mm-dd HH:MM:SS; default=]
+    k1_start: 1                                    # start index for k1 dimension [min=0; max=101; default=1]
+    k1_stop: 101                                   # stop index for k1 dimension [min=1; max=101; default=101]
+    k1_stride: 1                                   # stride for k1 dimension [min=1; default=1]
+    k_start: 1                                     # start index for k dimension [min=0; max=100; default=1]
+    k_stop: 100                                    # stop index for k dimension [min=1; max=100; default=100]
+    k_stride: 1                                    # stride for k dimension [min=1; default=1]
+    time_method: point                             # treatment of time dimension [point=instantaneous, mean, integrated; default=point]
+    xtype: default                                 # data type [default, single=32-bit float, double=64-bit double; default=default]
+    time_reference:                                # reference date and time to use in time units [yyyy-mm-dd HH:MM:SS; default=]
+    sync_interval: 1                               # number of output steps between sychronization to disk (<= 0: sync on close only) [default=1]
+    operators:
+    groups:
+    variables:
+    - source: *                                    # variable name in model
+      time_method: mean                            # treatment of time dimension [point=instantaneous, mean, integrated; default=point]
+      xtype: default                               # data type [default, single=32-bit float, double=64-bit double; default=default]
+      prefix:                                      # name prefix used in output [default=]
+      postfix:                                     # name postfix used in output [default=]
+      output_level: 8                              # output level [default=8]
+    - source: int_change_in_total_carbon           # variable name in model
+      time_method: point                           # treatment of time dimension [point=instantaneous, mean, integrated; default=point]
+      xtype: default                               # data type [default, single=32-bit float, double=64-bit double; default=default]
+      name: int_change_in_total_carbon             # name used in output [default=int_change_in_total_carbon]
+    - source: int_change_in_total_nitrogen         # variable name in model
+      time_method: point                           # treatment of time dimension [point=instantaneous, mean, integrated; default=point]
+      xtype: default                               # data type [default, single=32-bit float, double=64-bit double; default=default]
+      name: int_change_in_total_nitrogen           # name used in output [default=int_change_in_total_nitrogen]
+    - source: int_change_in_total_phosphorus       # variable name in model
+      time_method: point                           # treatment of time dimension [point=instantaneous, mean, integrated; default=point]
+      xtype: default                               # data type [default, single=32-bit float, double=64-bit double; default=default]
+      name: int_change_in_total_phosphorus         # name used in output [default=int_change_in_total_phosphorus]
+    - source: int_change_in_total_silicate         # variable name in model
+      time_method: point                           # treatment of time dimension [point=instantaneous, mean, integrated; default=point]
+      xtype: default                               # data type [default, single=32-bit float, double=64-bit double; default=default]
+      name: int_change_in_total_silicate           # name used in output [default=int_change_in_total_silicate]
+
